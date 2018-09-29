@@ -7,6 +7,23 @@
 //
 
 import Foundation
-
-print("Hello, World!")
-
+var i=0
+var j=0
+var k=0
+var a:[Int] = [9,18,7,26,5,2,3,12,1,0]
+for i in (0 ..< 10)
+{
+    for j in (0 ..< (9-i))
+    {
+        if a[j]>a[j+1]
+        {
+            k=a[j+1]
+            a[j+1]=a[j]
+            a[j]=k
+        }
+    }
+}
+for i in 0...10
+{
+print("\(a[i])",terminator: " ")
+}
